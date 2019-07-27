@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<title></title>
+  <style>
+    .footer{
+      background-color: #000;
+      color: #fff;
+    }
+    .img-head{
+      color: #ccc;
+      text-align: center;
+      font-family:serif;
+    }
+    .style{
+      color: #000;
+      font-size:200%; 
+      font-family: "Times";
+
+    }
+    .img{
+      text-transform: uppercase;
+    }
+    body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*background: #e74c3c !important;*/
+    }
+
+    .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    }
+    a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  }
+
+  a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+
+  .previous {
+  background-color: #f1f1f1;
+  color: black;
+  }
+
+  .next {
+  background-color: #4CAF50;
+  color: white;
+  }
+
+  .round {
+  border-radius: 50%;
+  }
+
+    .navbar a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+  
+    .sigin{
+      margin-left: 500px;
+      border-radius: 25px;
+      font-family: serif;
+      font-weight: 700;
+      text-align: center;
+    }
+    .sigin:hover{
+      font-size: 25px;
+      font-family: serif;
+      border-width: 10px;
+      border-color: red;
+
+    }
+    .buttonload {
+      background-color: #4CAF50; /* Green background */
+      border: none; /* Remove borders */
+      color: white; /* White text */
+      padding: 12px 16px; /* Some padding */
+      font-size: 16px /* Set a font size */
+    }
+
+
+
+    p {
+      font-family: serif;
+      font-weight: 700;
+    }
+    h3{
+      font-family: serif;
+      font-weight: 700;
+    }
+    .list-inline{
+      font-family: serif;
+      font-weight: 700;
+    }
+    #myBtn{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+    .dropdown-content{
+      display: none;
+    }
+   .btn:hover{
+    color: white;
+    }
+    a{
+      color: red;
+      font-family: serif;
+      font-weight: bold;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+  	<div class="container">
+	<div class="navbar-header">
+  	<a class="navbar-brand" href="#">Akash matale</a>
+	</div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+      	<div class="header-social-media">
+		   	 <a><i class="fa fa-facebook"></i></a> 
+		   	 <a><i class="fa fa-twitter"></i></a> 
+		   	 <!-- <a><i class="fa fa-google-plus"></i> </a> -->
+		   	 <a><i class="fa fa-instagram"></i> </a>
+		   	 <a> <i class="fa fa-pinterest"></i> </a>
+   		</div> 	
+   	  </li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-sm-offset-3 col-sm-6">
+          <ul class="list-inline">
+            <li class="li">Team:</li>
+            <li class="camera">camera's:</li>
+            <li class="photos">Photos:</li>
+            <li class="contact">contact:</li>
+          </ul>
+          
+  		</div>
+  	</div>
+    <script type="text/javascript">
+      $(function(){
+      $( ".li" ).hover(function() {
+      $( this ).append( $( "<ul><li><a>akash</a></li><li><a>manish</a></li><li><a>rohit</a></li><li><a>aniket</a></li></ul>" ) );
+  },
+    function() {
+    $( this ).find( "ul:last" ).remove();
+  }
+);
+ $( ".camera" ).hover(function() {
+    $( this ).append( $( "<ul><li><a>canon</a></li><li><a>sony</a></li><li><a>nikon</a></li><li><a>alpha</a></li></ul>" ) );
+  }, function() {
+    $( this ).find( "ul:last" ).remove();
+  } 
+);
+ $( ".photos" ).hover(function() {
+    $( this ).append( $( "<ul><li><a>model</a></li><li><a>baby</a></li><li><a>B-Day</a></li><li><a>EventS</a></li></ul>" ) );
+  }, function() {
+    $( this ).find( "ul:last" ).remove();
+  } 
+);
+ $( ".contact" ).hover(function() {
+    $( this ).append( $( "<ul><li><a>Akash:-6765454543</a></li><li><a>manish:-9898767654</a></li><li><a>Rohit:-87876567654</a></li><li><a>aniket:-8787987656</a></li></ul>" ) );
+  }, function() {
+    $( this ).find( "ul:last" ).remove();
+  } 
+);
+ })
+    </script>
+  </div>
+
+<div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+
+        <img src="img/1.jpeg"  style="width:100%;">
+        
+      </div>
+
+      <div class="item">
+        <img src="img/2.jpeg" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/3.jpeg" style="width:100%;">
+      </div>
+    </div>
+    <h3 class="img-head">Akash matale photography</h3>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    <h2 style="font-family: serif;font-weight: 700;">Style and Poses</h2>
+  <div class="container-flude">
+    <div class="row">
+      <div class="col-sm-4 ">
+        <img src="img/style/1.jpg" width="100%">
+        <a href="">For more</a>&nbsp;
+        <h2 style="font-family: serif;font-weight: 700;">This photo is click portrate mode and that mode provide more classic pic...</h2>&nbsp;
+        <p>This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.</p>
+        <a href="#">Akash Matale::</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a><i class="fa fa-facebook"></i></a>&nbsp;
+        <a><i class="fa fa-twitter"></i></a>&nbsp; 
+        <a><i class="fa fa-instagram"></i> </a>&nbsp;
+        <a> <i class="fa fa-pinterest"></i> </a> 
+      </div>
+      <div class="col-sm-4">
+        <img src="img/style/2.jpg" width="100%">
+        <a href="">For more</a>
+        <h2 style="font-family: serif;font-weight: 700;">This photo click by outdoor and randome click...</h2>&nbsp;
+        <p>This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.</p>
+        <a href="#">Akash Matale::</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a><i class="fa fa-facebook"></i></a>&nbsp;
+        <a><i class="fa fa-twitter"></i></a>&nbsp; 
+        <a><i class="fa fa-instagram"></i> </a>&nbsp;
+        <a> <i class="fa fa-pinterest"></i> </a> 
+      </div>
+      <div class="col-sm-4">
+        <img src="img/style/3.jpg" width="100%">
+        <a href="">For more</a>
+        <h2 style="font-family: serif;font-weight: 700;">This is click by akash matale photography and our team...</h2>&nbsp;
+        <p>This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.This web site can be criate by akash matale. and this photography in base on akash matale photography. photography it is not only show 100 word it also attach emotionals and family spended time.</p>
+        <a href="#">Akash Matale::</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a><i class="fa fa-facebook"></i></a>&nbsp;
+        <a><i class="fa fa-twitter"></i></a>&nbsp; 
+        <a><i class="fa fa-instagram"></i> </a>&nbsp;
+        <a> <i class="fa fa-pinterest"></i> </a> 
+        </div>
+      </div>
+
+      </div>
+      <h2 style="font-family: serif;font-weight: 700;">New photos:-</h2>
+
+        <div class="container-flude">
+        <div class="row">
+          <div class="col-sm-2">
+            <img width="100%" src="img/more/1.jpeg">
+          </div>
+          <div class="col-sm-1">
+            <a style="font-family: serif;font-weight: 700;" href="#">Akash Matale Photography.</a>
+            <p style="font-family: serif;font-weight: 700;">This photo can be click by akash matale...</p>
+          </div>
+          <div class="col-sm-2">
+            <img width="100%" src="img/more/2.jpeg">
+          </div>
+          <div class="col-sm-1">
+            <a style="font-family: serif;font-weight: 700;" href="#">Akash Matale Photography.</a>
+            <p style="font-family: serif;font-weight: 700;">This photo can be click by akash matale...</p>
+          </div>
+          <div class="col-sm-2">
+            <img width="100%" src="img/more/3.jpeg">
+          </div>
+          <div class="col-sm-1">
+            <a style="font-family: serif;font-weight: 700;" href="#">Akash Matale Photography.</a>
+            <p style="font-family: serif;font-weight: 700;">This photo can be click by akash matale...</p>
+          </div>
+          <div class="col-sm-2">
+            <img width="100%" src="img/more/4.jpeg">
+          </div>
+          <div class="col-sm-1">
+            <a style="font-family: serif;font-weight: 700;" href="#">Akash Matale Photography.</a>
+            <p style="font-family: serif;font-weight: 700;">This photo can be click by akash matale...</p>
+          </div>
+    </div>
+  </div>
+  <div style="padding-top: 100px;" class="container">
+  <div class="well well-lg">
+    <h2 class="" style="font-family: serif;font-weight: 700;text-align: center;">subscribe for update!</h2>
+    <button class="sigin" >Sign In</button>
+  <p style="font-family: serif;font-weight: 700;text-align: center;">This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .This is form for web site to login and sigin up .</p>
+
+</div>
+</div>
+<div class="row">
+<div class=" col-sm-4">
+<h3 style="font-family: serif;font-weight: 700;">latest post:-</h3>
+
+  <img width="100%" style="border-radius: 200px;padding: 80px;" src="img/latest/1.jpeg">
+  &nbsp;
+  <img width="100%" style="border-radius: 200px;padding: 80px;" src="img/latest/2.jpeg">
+  &nbsp;  
+  <img width="100%" style="border-radius: 200px;padding: 80px;" src="img/latest/3.jpeg">
+  &nbsp;  
+  <img width="100%" style="border-radius: 200px;padding: 80px;" src="img/latest/4.jpeg">
+  &nbsp;  
+  <br>
+  <button class="btn" style="border-radius: 50%;background-color: #D79C74;color: #fff;">1</button>
+  <button class="btn" style="color: #000;background-color: #fff;">2</button>
+  <button class="btn" style="color: #000;background-color: #fff;">3</button>
+  <button class="btn btn-outline-dark" style="border-radius: 50%;">Next</button>
+</div>
+<div class=" col-sm-4">
+  <h3 style="padding-bottom: 10%;padding-top: 20%;">This is my first img toody...</h3>
+  <p style="padding-bottom: 50%;">this pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the day.“In photography there is a reality so subtle that it becomes more real than reality.”“In photography there is a reality so subtle that it becomes more real than reality.”Taking an image, freezing a moment, reveals how rich reality truly is.Taking an image, freezing a moment, reveals how rich reality truly is.We are making photographs to understand what our lives mean to usA thing that you see in my pictures is that I was not afraid to fall in love with these people.“You don’t take a photograph. You ask quietly to borrow it.Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”A portrait is not made in the camera but on either side of it.”It’s one thing to make a picture of what a person looks like, it’s another thing to make a portrait of who they are.”
+  </p>
+  <h3 style="padding-bottom: 10%;padding-top: 20%;">This is my first img toody...</h3>
+  <p style="padding-bottom: 70%;">this pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the day.We are making photographs to understand what our lives mean to usA thing that you see in my pictures is that I was not afraid to fall in love with these people.“You don’t take a photograph. You ask quietly to borrow it.Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”A portrait is not made in the camera but on either side of it.”It’s one thing to make a picture of what a person looks like, it’s another thing to make a portrait of who they are.”</p>
+  <h3 style="padding-bottom: 10%;padding-top: 10%;">This is my first img toody...</h3>
+  <p style="padding-bottom: 50%;">this pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the day.We are making photographs to understand what our lives mean to usA thing that you see in my pictures is that I was not afraid to fall in love with these people.“You don’t take a photograph. You ask quietly to borrow it.Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”A portrait is not made in the camera but on either side of it.”It’s one thing to make a picture of what a person looks like, it’s another thing to make a portrait of who they are.”</p>
+  <h3 style="padding-bottom: 10%;padding-top: 20%;">This is my first img toody...</h3>
+  <p style="padding-bottom: 0%;">this pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the daythis pic is capture bt the day.We are making photographs to understand what our lives mean to usA thing that you see in my pictures is that I was not afraid to fall in love with these people.“You don’t take a photograph. You ask quietly to borrow it.Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”A portrait is not made in the camera but on either side of it.”It’s one thing to make a picture of what a person looks like, it’s another thing to make a portrait of who they are.”</p>
+
+
+
+</div>
+<div class="col-sm-2">
+  <h3 style="text-align: center;">Today's Photo's:-</h3>
+  <img style="border-radius: 35%;padding: 5%;" width="80%" src="img/todys/1.png">
+  <img style="border-radius: 35%;padding: 5%;" width="80%"  src="img/todys/2.jpg">
+  <img style="border-radius: 35%;padding: 5%;" width="80%" src="img/todys/3.jpg">
+</div>
+  <a href="#" class="previous round">&#8249;</a>
+  <a href="#" class="next round">&#8250;</a>
+<div style="margin-top: 5%;" class="col-sm-2">
+  <a href=""><h5>five way to click photos</h5></a>
+  <a href=""><h5 style="margin-top: 30%;">Tips for photography.</h5></a>
+  <a href=""><h5 style="margin-top: 30%;">type's of photography</h5></a>
+<button class="buttonload">
+  <i class="fa fa-spinner fa-spin"></i>Loading
+</button>
+</div>
+
+<a  href="#" style=" padding: 10px;
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  background: #3B5998;
+  color: white;" class="fa fa-facebook"></a>
+<a  href="#" style=" padding: 10px;
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+   background: #3B5998;
+  color: white;" class="fa fa-twitter"></a>
+<a  href="#" style=" padding: 10px;
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px; background: #dd4b39;
+  color: white;" class="fa fa-google"></a>
+  </div>
+</div>
+
+<button style="background-color: pink;border-radius: 50%;margin-left: 90%;margin-bottom: 5%;" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+<div class="container-flude">
+    <div class="row footer text-center ">
+      <div class="col-sm-4"> 
+        <h3>about us:-</h3>
+        <h3>this is a demo</h3>
+        <p style="font-size:10px">thios is a demo web site and i m for work on this web site i can cover many fumction in bootstrap and perform very well this is to much fun to criate this web ite and i can exited to do manny more in web devlovping thnanqqq </p>
+        <ul class="list-inline"> 
+        <li>
+        <div  class="footer-social-media">
+         <a style="color: #f2f2f2;"><i class="fa fa-facebook"></i></a> 
+         <a style="color: #f2f2f2;"><i class="fa fa-twitter"></i></a> 
+         <a style="color: #f2f2f2;"><i class="fa fa-instagram"></i> </a>
+         <a style="color: #f2f2f2;"> <i class="fa fa-pinterest"></i> </a>
+        </div>  
+        </li>
+      </ul>
+      <h3 style="text-align: left;">Hot Tag's</h3>
+      <ul " class="list-inline">
+        <li><button class="btn btn-default" style="background-color:black;border-radius: 50%;">#Facebook</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Whatsapp</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Instagram</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#tweeter</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Snapdeal</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Google</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Gmail</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Email</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Teligram</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Slack</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#GitHub</button></li>
+        <li><button class="btn btn-default" style="background-color: black;border-radius: 50%;">#Globle</button></li>
+        
+      </ul>
+
+      </div>
+      <div class="col-sm-4">
+      <h3>Trending slider</h3>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+      <img width="35%" style="border-radius: 25%;" src="img/4.jpeg">
+      <!-- <img width="35%" style="border-radius: 25%;" src="img/5.jpeg"> -->
+
+      </div>
+      <div class="col-sm-4">
+      <h3>
+      <ul class="list-inline">
+          <li>latest</li>
+          <li>popular</li>
+      </ul>
+      </h3>
+      <h6><img width="100%" style="border-radius: 25%;width: 25%;margin-bottom: 2%;" src="img/1.jpeg"><br>This is a no one site</h6>
+      <img width="100%" style="border-radius: 25%;width: 25%;margin-bottom: 2%;" src="img/1.jpeg"><br>
+      <img width="100%" style="border-radius: 25%;width: 25%;margin-bottom: 2%;" src="img/1.jpeg"><br>
+      <img width="100%" style="border-radius: 25%;width: 25%;" src="img/1.jpeg">
+      </div>
+    </div>
+</html>
